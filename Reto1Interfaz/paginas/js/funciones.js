@@ -7,7 +7,7 @@ $("#login").click(function(){
             contrasena: $("#contrasena").val()
         }
         $.ajax({
-            url:"http://129.151.97.16:8080/api/User/"+datos.email+"/"+datos.contrasena,
+            url:"http://129.151.97.16:8080/api/user/"+datos.email+"/"+datos.contrasena,
             method:"GET",
             dataType:"json",
             success:function(response){
@@ -39,7 +39,7 @@ $("#guardar").click(function(){
                 name: $("#usuarioRegistro").val()
             }
             $.ajax({
-                url:"http://129.151.97.16:8080/api/User/new",
+                url:"http://129.151.97.16:8080/api/user/new",
                 method:"POST",
                 dataType:"json",
                 data:JSON.stringify(datos),
